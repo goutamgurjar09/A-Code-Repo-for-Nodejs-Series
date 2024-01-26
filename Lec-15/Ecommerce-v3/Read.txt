@@ -1,0 +1,15 @@
+//Types Validation 
+//1. Client side  2. Server side
+
+//required ->1. Client side-> jb bhi hm input filed me ise likhte hai tb bo field ko fill krna mendetory hota hai  and iska validation browser krta hai  ise hm client side validation khte hai
+//ydi hm required nhi likhege to jo hmne product.js model me-> required:true    se hmara code fat/error jayega   means jb bhi hm new product add krege tb ydi hm price/name nhi denge to hmara code fat jayega bcz bo dono mendatory hai
+
+
+//when we do server side validation/jb bhi apko apne data ko validate krna hota hai then we use JOI package ->  https://joi.dev/api/?v=17.9.1
+
+//how we can use joi  ?
+
+//1. we need to create/define  schema for that means joi ka use krke->Productschema  and Reviewschema  ->see joi-Schema.js
+//2. then jo bhi joi ki help se schema bnaya usko validate means  joi ko validate krna  ->see middleware.js
+ 
+//3. Phle Server side validation  krege then new product add krege ise hi hm middleware khte hai jo hr ek incoming req. ke beech me aate hai -> see middleware.js

@@ -1,0 +1,29 @@
+//GET :
+*get method ke through hm data ko send kr skte hai url pr
+
+*get should we used to retrieve/fetch the data bcz data safe nhi hota 
+
+*in get method data is send as query parameter means we can see the data in req.query
+
+*get is less secure
+
+* data is  send  in the url
+
+* in get() data is send as a plain string in query parameter/url
+
+* we can send only 2048 character of data using get
+
+
+//POST :
+*Post method ke through bhi hm data send krte hai 
+*post method used to make changes on the server
+
+*in post method data is send as req.body
+
+* get is more secure
+
+* data is not send  in the url
+
+* in post we can send different types of data like jason,xml,string
+
+* in post we can send as mush data as we want means thare is no limit

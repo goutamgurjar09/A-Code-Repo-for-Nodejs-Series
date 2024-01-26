@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit page</title>
+</head>
+<body>
+    <h1> edit </h1>
+    <!-- foundComment  is an array of object in index.js Task-5  and foundComment.id  means id of obj -->
+
+    <!-- /comments/<%= foundComment.id %>?_method=PATCH  ->means hme /comments/:id pr request bhejni thi patch    -> means hme post method ko patch me convert krna hai  then hmne ise patch me convert kiya ?_method=PATCH  bcz hme post method se data nhi bhejna tha --> _method is a name inside index.js
+    <!-- when we submit tha form to  post req. ki jgh patch req. jayegi -> is path pr /comments/<%= foundComment.id %>?_method=PATCH  jo ki Task-6  me -> /comments/:id ko hit kregi   then hme id milegi or us id ke through hme comment/product milega jisme hme changes krna hai  then is form me jo bhi changes/edit hoga bo hme req.body se milega post method pr   then us product ke ander ke comment ko req.body se jo milega change hokr usse update kr denge or hmara comments edit ho jayega ->     see index.js-->
+    <form action="/comments/<%= foundComment.id %>?_method=PATCH" method="POST">
+        <!-- <label for="nam">Username</label>
+       <input type="text" name="username" id="nam">  edit krte time hm author ka name change nhi kr skte its not logically right/a good practise bcz author ka name change krna means hm apne login ataintion ko bdl rhe  isliye hm ise comment kr rhe      here name="username" is the property of arr of object that is hold tha vlue ->which is present inside index.js -->
+
+        <label for="content">Comment</label>               <!--here name="comment" is the property of arr of object which is present inside index.js -->
+        <textarea name="comment" id="content" cols="30" rows="10"> <%= foundComment.comment %> </textarea>          <!--Set the value  means jo bhi hmare array of obj. me comment property ki value hogi vo textarea pr dikhegi when we hit this path isme hme id ke according data milega->  http://localhost:8080/comments/1/edit ->foundComment.comment in textarea
+
+        
+        <button type="submit">Edit comment</button>
+
+    </form>
+</body>
+</html> 

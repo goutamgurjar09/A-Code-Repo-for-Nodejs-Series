@@ -1,0 +1,32 @@
+//RestFul Architecture
+
+*its a way of writing a code
+
+//RESTFUL -> means WAY/TARIKA
+* RE -> Representational
+* S -> State
+* T -> Transfer
+
+//OVERALL Means 1 tarika adapt kar lete hai and us tarike se saare code likhte hai
+
+//ex-> DRY : DON'T REPEAT YOURSELF
+//     WET : WRITE EVERYTHING TWICE
+
+
+
+//-------------------
+//Restful-Api => to provide data means jb bi hm server se req. krte hai tb hme ek data milta hai responce ke roop me
+                 //restful means way of writing/ hm jo bhi req. bhejte hai bo restful tarike se usi ko khte hai and hme data milta hai
+
+//ex- app.get('/cat',(req,res){}) this is way of writing/restful way
+
+//-------------------
+//Restful-Routes => jb bhi hm req. krte hai tb hme ya to data milega ya page ->ydi hme data milta hai to hm use REST-API khte hai and 
+//                  jb bhi hme koi page milega to use hm Restful-Routes khte hai
+
+
+
+//------------------
+//Redirect :means  sending a get request on a perticuler path/route
+
+//See restful architecture table image in download folder

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Edit Product form</h1>
+
+    <form action="/products/<%=foundProduct._id%>?_method=PATCH" method="post">  <!--means jb hm /products/edit route  per post req. se kise new Product ko patch() se update krege uske baad use /products pr bhej dege  jha sare products dikhege-->
+        <div>
+            <!-- value="<%=foundProduct.name%>" isse hme jo bhi form ke ander phle se value thi bo mil jayegi bcz hm form ki value ko edit kr rhe hai means phle jo value thi unki jgh dusri value update krege tb -->
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name" value="<%=foundProduct.name%>">
+        </div>
+        <div>
+            <label for="pic">Image:</label>
+            <input type="text" name="img" id="pic" value="<%=foundProduct.img%>" >
+        </div>
+        <div>
+            <label for="price">Price:</label>
+            <input type="text" name="price" id="price" value="<%=foundProduct.price%>">
+        </div>
+        <div>
+            <label for="des">Description:</label>
+            <textarea name="desc" id="" cols="30" rows="10"> <%=foundProduct.name%> </textarea>
+            <!--or we can use-> <%=foundProduct.desc%>  -->
+        </div>
+        <button type="submit">Edit Product</button>
+        <!-- then go on index.ejs page last me hme edit this btn bnayege jispr id ke through hm Perticuler product ko edit payege -->
+
+</body>
+</html>

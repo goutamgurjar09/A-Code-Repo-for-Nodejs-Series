@@ -1,0 +1,40 @@
+//Types of software architecture
+ 
+//1. Monolithic  -> isme 1 server and 1 database hota hai  and it will create full application
+//2. Microservises -> isme jitne bhi ffeature hote hai mejority/every feature on a diff. server  and same with db means isme multiple databses ka use hota hai
+
+
+//Whenever we create an application so usme 3 layers hoti hai inhi ka use krke puri application create krte hai
+
+//1. presentatin layer  -> means UI part like html ,css,js part 
+
+//2. Business logic layer -> means jo hm backend se logic / api   likhte hai  like -> expressjs/nodejs
+
+//3. database layer -> jo bhi aap db use krte ho like mongodb 
+
+
+
+//What is MVC architecture
+
+//M - Model
+//V - view
+//C - controller
+
+//MVC ka use hm apne codebase ko DRY (do not repeat yourself)  krne ke liye use krte hai  taki jiska kaam use ko saaje
+
+//Jaise hm model ka folder alg bnate hai  and views ka folder alg bnate hai  and controller ka folder alg bnate hai 
+
+//so that sabhi apne kaam ke liye responsible ho means hr ek folder apna-apna alg kaam krta hai
+
+
+//Model -> jitne bhi Schema bnayege bo isme hote hai
+//View -> jitne bhi hm Templates bnate hai bo isme rhege
+//controller/Routes -> jitne bhi hm Routes/api bnate hai bo isme hoti hai means api hit krne ke liye alg folder 
+
+
+//Notes:-Ecommerce website
+//jb bhi hm Ec. site  bnate hai to uske ander products hote hai  and products ke ander kuch collections/Model hote hai jinhe hm model bhi khte hai
+
+//and Model bnta hai with the help of Schema  and schema is a blueprint/design means use kaise darsaya jayega/bo dikhega kaise
+
+//Note: jitne bhi hm models bnate hai model folder me uska first latter hmesa capital hona chahiye -> Product.js

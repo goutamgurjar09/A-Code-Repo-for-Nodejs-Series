@@ -1,0 +1,10 @@
+//Postman - Postman hamari help krta hai server pr request send krne ke liye through get/post method ....and so on
+//means postman ke help se hm sever pr get,post,put,patch,delete,head,options etc. itni req. send kr skte hai
+//for API testing we can use this tool
+
+//Note:-Browser se hm sirf get req. bhej skte hai  
+//Note:- Post req. ke liye hme form create krna pdta hai
+
+//Postman se hm query string data bhi bhej skte hai by url  -> http://localhost:5050?page=1&sort=date&limit=1&goutam=programer
+
+//Postman me hm Collection create kr skte hai jisse hm req. ko orgenize way me rkh ske 

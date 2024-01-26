@@ -1,0 +1,5 @@
+PS C:\Users\HP\Desktop\node> cd lec-4
+PS C:\Users\HP\Desktop\node\lec-4\> cd express
+PS C:\Users\HP\Desktop\node\lec-4\express> npm init -y
+
+PS C:\Users\HP\Desktop\node\lec-4\express> npm i express nodemon

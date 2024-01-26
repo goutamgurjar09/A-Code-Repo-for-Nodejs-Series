@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>show new.ejs page</h1>
+    
+    <form action="/comments" method="post">
+        <label for="nam">Username</label>
+       <input type="text" name="username" id="nam">      <!--here name="username" is the property of arr of object that is hold tha vlue ->which is present inside index.js -->
+
+        <label for="content">Comment</label>               <!--here name="comment" is the property of arr of object which is present inside index.js -->
+        <textarea name="comment" id="content" cols="30" rows="10"></textarea>
+        
+        <button type="submit">Add comment</button>
+
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,98 @@
+//Types of Relationship  in Database
+
+//1. 1:1   -> 1 has to 1
+//2. 1:few  -> 1 has to few
+//3. 1:many -> 1 has to many
+
+
+//---------------
+//->1:1
+|--------|-----------|    |--------|------------| 
+|  id    |   Name    |    |  id    |  AAdhar No.|
+|--------|-----------|    |--------|------------|
+|  1     | goutam    |    |   1    | 12345      |
+|  2     | lala      |    |   2    | 74634      |
+|  3     | kanu      |    |   3    | 35462      |
+|        |           |    |        |            |
+
+//Note: we have two table t1 and t2  and we have two find a relation jisse hm dono table ko add kr ske
+//Note: hm yha id ke through add kr skte hai dono table ko and ye add ho gye to goutam ke pass only 1 aadhar no. ho skta hai ise hi 1:1 relation bolte hai
+
+//---------------------
+//-> 1:Many
+|--------|-----------|----------    |--------     |-------------------------- 
+|  id    |   Name    | following    |  id         |  followers name  follow
+|--------|-----------|-----------   |--------     |----------------|---------
+|  1     | virat     |  1,2         |   1         | raj            | virat
+|  2     | rohit     |   3          |   2         | ram            | virat
+|        |           |              |   3         | shyam          | rohit
+|        |           |              |             |                |
+
+//Note: ydi in dono table ko hm join krege tb  Means yha pr virat ke followers 2 hai raj and ram   and Rohit ka only 1  
+//to yha pr 1:Many ka relation bn gya
+
+
+
+//->1:few
+
+|--------|-----------|    |--------|------------|------
+|  id    |   product |    |  id    |  ADD.      |Buyer
+|--------|-----------|    |--------|------------|------
+|  1     | pizza     |    |   1    | goa        |goutam
+|  2     | paneer    |    |   2    | goa-1      |
+|        |           |    |   3    | goa-2      |
+
+//assume mene zomoto se khana order kiya to usme mene alg alg assume hmne 5  home add. dal diye to practically 5 se upr to nhi aa skta ye order  
+//means there is a limit ki isse upr tum add. attech nhi kr skte ise ko 1:few bolte hai
+
+
+
+//How to add review in EC website
+
+//we have a model Product  name se and usme hmare pass wk array of object me schema bna hua hai 
+//Now hme review add krna hai to hm usme ek reviews ka array bna skte hai
+
+//ex-> we have a Model-> Procuct arr jisme obj ke roop me properties hai 
+//Now i want isme hm reviews bhi add kr skte hai   but reviews to hmare pass bhot ho/bhot log kr skte hai to iske liye hme ek aaray of object bnana pdega  means hme review ka schema bnana pdega
+//jisme 2 properties hogi 1. Rating 2.comment    bcz product me rating and comment dono hoti hai
+
+//Product model/collections
+Product =[
+    { 
+        id:
+        name:
+        img:
+        price:
+        desc:
+        review:[
+            {rating:3 , comment:"good"},         x
+            {rating:4 , comment:"good............................................"},         x ->bcz ye ydi 200 line ki hui to hmara obj kitna bda bnega
+            {rating:2 , comment:"bad............"}           x
+        ]
+    }    
+]
+
+//Note: Ab kisine  assume 200-300 line ka comment kr diya apke product me to  ye comment to is array of object me store to hoga but ye to bhot bda/jyada line ka ho jayega  or itni line ka comment hm apne array of object me likhege to  this is not a good practise this is wrong way
+
+//Review collection/Model
+//Note: To hm iske liye alg se ek Collection/Model bnayege Review name se  means reviews bhot sare ho skte hai jiske ander sare reviews ki->    id , rating and comment ki schema bni hogi or hr ek reviews ki id unique hogi
+
+
+//Note: But hm is Reviews ki id ko store kr skte and ID object type ki hai  ->Product arr of obj. me store kr skte hai-> review  ke ander  -> pls see niche ex. me       bcz hr ek review ki id unique hoti hai 
+ and hm  isse durse bale collection Review se id ke through hm rating and comment show krwa skte hai
+
+//To store ObjectID
+ Product =[
+    { 
+        id:
+        name:
+        img:
+        price:
+        desc:
+        review:[
+            ObjectID  -> ye alg alg hr ek review ki id hai jo ki hme Review model se milegi jise hm Product arr of  obj->review  me store krege  then hme iske through rating or comment show kr skte hai
+            ObjectID
+            ObjectID
+        ]
+    }    
+]

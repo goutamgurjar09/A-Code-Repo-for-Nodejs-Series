@@ -1,0 +1,1 @@
+//npm init -y  jb bhi kise project folder create krne ke baad   npm init -y ->  ka use back-end ke project ko initialize krne ke liyhe so that sari chije independent rhe 

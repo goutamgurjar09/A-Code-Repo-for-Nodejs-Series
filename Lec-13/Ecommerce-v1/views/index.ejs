@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Displaying all the products</h1>
+
+    <%for(let item of products){ %>
+        <h1> <%=item.name%> </h1>
+        <img src= "<%=item.img%>" >
+        <h3> <%=item.price%> </h3>
+        <h1> <%=item.desc%> </h1>
+
+        <a href="/products/<%=item._id%>">Show this</a>           <!--_id isliye likh rhe bcz DB me id ese hi store hoti hai hmne show this btn bnayege jispr id ke through hm Perticuler product ko dekh payege  and id hme jo  bhi hmare DB me hogi bhi milegi->   http://localhost:8080/products/65a026a9349399d87fde75eb-->
+        <a href="/products/<%=item._id%>/edit">Edit this</a>           <!--_id isliye likh rhe bcz DB me id ese hi store hoti hai hmne show this btn bnayege jispr id ke through hm Perticuler product ko dekh payege  and id hme jo  bhi hmare DB me hogi bhi milegi->   http://localhost:8080/products/65a026a9349399d87fde75eb/edit     -->
+
+        <form action="/products/<%=item._id%>?_method=Delete" method="post">
+            <button>Delete this</button>          
+        </form>
+    <% } %>
+</body>
+</html>

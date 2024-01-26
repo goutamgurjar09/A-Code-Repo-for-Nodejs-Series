@@ -1,0 +1,64 @@
+//Cookies  -> 
+1. its a client side storage means client ke browser pr store hoti hai key ,value ki form means
+2. iska use hm personalization ke liye krte hai means like mujhe dark mode pasnd nhi hai ,mujhe light mode psnd hai so thats my personal choice  /ex-2 mujhe kuch chijo ki traking krni hai ki me konsi website pr ja rha hu /kha ja rha hu etc
+3. cookies are stateful means ye previous req. jo bheji thi hmne us pr bhi dependent hoti hai
+//Ex- assume  client ne server ko first time req. ki means aapne kise website pr first time visit kiya to bha ek option aata hai/server aapse puchta hai cookies ko accept krne ka->do you accept the cookies/not
+//to jb bhi aap cookies ko accept krte ho to server aapke paas ek responce ke sath cookies ko bundle krke  bhejta hai jo ki client ke browser pr store ho jati hai
+//Ab jb bhi user/client second time req. bhejta hai use server/website pr to req. ke sath cookies ka  object bhi jata hai  jo aapke server ko aasani de 
+//ex-> jaise i am a sportsman/client and ek chrome ka server hai ->assume  mene aj tk sirf sports ke bare me search kiya hai  to assume meri jo req. gyi hai->lets say ye meri 10th req. thi or isme mene bat->चमगादड़ ke bare me serch kiya to sirf rq. nhi jayegi req. ke sath-sath prev. cookies bhi jayegi  
+//to server mujhe do responce bhej skta tha bat ->चमगादड़   ya fir bat ->बल्ले   but meri sari purani history/req.  bat ->बल्ले  ke thi to bo mujhe iske bare me bhej dega
+//so cookies prev. data pr bhi dependent hoti hai
+
+
+
+//Session -> 
+1. its a server side storage 
+
+
+//Session storage ->
+1. its a client side storage
+
+
+//cookie-parser -> Her ek incomming req. ke sath Cookies jati hai server pr when you server pr second time req. send krte ho tb  use hm directly nhi dekh skte uske liye hm ek package ka use krke dekh skte hai
+                 //iske through  hm  cokies ko dekh skte hai inside our current req.  ki
+npm install cookie-parser
+
+
+const cookieParser = require('cookie-parser');
+
+// Use cookie-parser middleware
+app.use(cookieParser());
+
+
+Purpose of cookie-parser:
+Parsing Cookies:
+
+The primary purpose of cookie-parser is to parse HTTP request cookies. When a client sends an HTTP request to your server, it can include cookies in the request headers. Cookies are key-value pairs that store small pieces of information on the client side.
+cookie-parser middleware parses these cookies and makes them accessible in the request object of your Express.js application.
+Simplified Cookie Handling:
+
+It simplifies the process of working with cookies. Instead of manually parsing the raw cookie string from the request headers, cookie-parser provides a more convenient API for working with cookies in an Express.js application.
+Usage in Express.js:
+
+app.use(cookieParser());: This line is telling your Express app to use the cookie-parser middleware for every incoming request. When a request is received, the middleware will parse the cookies, if any, and make them available in the request.cookies object.
+
+
+
+
+//Session -> When a user first visits a website, the server assigns a unique session identifier to that user. This identifier is often stored as a cookie on the user's browser.
+
+//Means jb bhi user/client server ko request bhejta hai to server use responce + cookies  bhejta hai   ab is cookies ke ander ek special chij hoti hai sessionID   and session ke liye server me thodi se memory/space  jha session store rhta hai jiske ander aap chijo ko store kr pate ho user ki like username , email etc.. same  jaise ki  client ke browser pr cookies ke roop me user ki datails store hoti hai
+//and jb bhi user second time req. bhejta hai to cookies ke sath sessionId bhi jati hai so we can easily access user values/details  on the basis of sessionID
+
+Note Session data is not saved in the cookies itself, just the session ID. Session data is stored server-side.
+
+
+//first install package 
+//npm install express-session
+
+
+
+
+
+//npm init -y  jb bhi kise project folder create krne ke baad   npm init -y ->  ka use back-end ke project ko initialize krne ke liyhe so that sari chije independent rhe 
+

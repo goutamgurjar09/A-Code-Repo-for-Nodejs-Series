@@ -1,0 +1,55 @@
+Templating -> Templating is derived from template->  means like structure 
+//Ex:- jaise reddit.com website pr hm kuch bhi like->https://www.reddit.com/r/apple/  , https://www.reddit.com/r/cat/   bcz /r fixed path hai -> ke baad jo bhi likhte hai to hme usse releted page milta hai
+//like-> apple,cat,dog.... path pr  req. bheji hmne server ko or server hme responce ke roop me pura page de rha 
+//but jo bhi hm serch krte hai uska data /template change hota hai 
+//overall means ek template define kr diya hai hmne and usme kbi dog/cat/apple ...and so on ese data change hor ha hai
+
+//---------------------
+//1. how to make a template?
+
+//temalte are create using templating engines //like-> hbs , ejs ,jade ,nunjucks ,pug  etc and...so on
+
+//but we are going to use ejs which is very similer to JS
+//and isko use krne ke liye hme ise install krna pdega then require it  -> npm i ejs  
+//Go official website- ejs.co
+
+//---------------------
+//how to use it?
+
+const path = require('path')  //for path.join
+
+app.set('view engine' , 'ejs') 
+app.set('views' , path.join(__dirname , 'views'))
+
+//Note: here-> ejs is templating engine name and usko app.set('view engine', 'ejs')  iski help se set krte hai
+//'view engine' ->property
+//'ejs' ->value
+
+//Note: here-> app.set('views' , path.join(__dirname , 'views'))
+//first 'views' -> property  and 
+//path.join(__dirname , 'views')-> views folder ko path.join ki help se join kr rhe
+//__dirname-> bcz hm kise bhi directory/path pr ho skte hai isliye hm ise path.join() ki help se __dirname ka use krke join kr rhe rather  then ->process.cwd() + '/views'
+//isliye hmne path ko starting me require kr liya
+
+
+//-----------------
+like->directory/folder same
+In a Node.js application, the line app.set('views', path.join(__dirname, 'views')) is used to configure the views directory for the Express.js framework.
+
+Let's break it down:
+
+app: This is an instance of the Express application. It is created when you call express() to create your app.
+
+.set('views', path.join(__dirname, 'views')): This line is using the set method of the Express application to configure a setting. In this case, it's configuring the 'views' setting.
+
+'views': This is the setting being configured. In Express, the 'views' setting is used to specify the directory where your views (templates) are stored.
+
+path.join(__dirname, 'views'): This part uses the path.join method to create an absolute path to the 'views' directory/folder. __dirname is a global variable in Node.js that represents the directory name of the current module (i.e., the directory where the current script resides).
+So, overall, this line is telling Express to look for views (templates) in the 'views' directory of your application,
+and the 'views' directory is assumed to be located in the same directory as the script (__dirname).
+
+
+//open and read it-> https://expressjs.com/en/4x/api.html#app.set
+
+
+

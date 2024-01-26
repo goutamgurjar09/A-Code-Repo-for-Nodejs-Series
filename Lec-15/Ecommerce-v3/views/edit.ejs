@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+</head>
+<body>
+    <h1>Edit Product form</h1>
+
+    <form class="needs-validation" action="/products/<%=foundProduct._id%>?_method=PATCH" method="post" novalidate>  <!--action="/products"  per post req. se add hoga new product  -->
+        <div>
+            <!-- value="<%=foundProduct.name%>" isse hme jo bhi form ke ander phle se value thi bo mil jayegi bcz hm form ki value ko edit kr rhe hai means phle jo value thi unki jgh dusri value daal rhe -->
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name" value="<%=foundProduct.name%>" required>
+        </div>
+        <div>
+            <label for="pic">Image:</label>
+            <input type="text" name="img" id="pic" value="<%=foundProduct.img%>">
+        </div>
+        <div>
+            <label for="price">Price:</label>
+            <input type="text" name="price" id="price" value="<%=foundProduct.price%>" required>
+        </div>
+        <div>
+            <label for="des">Description:</label>
+            <textarea name="desc" id="" cols="30" rows="10"> <%=foundProduct.name%> </textarea>
+            <!--or we can use-> <%=foundProduct.desc%>  -->
+        </div>
+        <button type="submit">Edit Product</button>
+        <!-- then go on index.ejs page last me hme edit this btn bnayege jispr id ke through hm Perticuler product ko edit payege -->
+    
+
+        <script>
+            // Example starter JavaScript for disabling form submissions if there are invalid fields
+            (() => {
+            'use strict'
+
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            const forms = document.querySelectorAll('.needs-validation')
+
+            // Loop over them and prevent submission
+            Array.from(forms).forEach(form => {
+                form.addEventListener('submit', event => {
+                if (!form.checkValidity()) {
+                    event.preventDefault()
+                    event.stopPropagation()
+                }
+
+                form.classList.add('was-validated')
+                }, false)
+            })
+            })()
+        </script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</body>
+</html>

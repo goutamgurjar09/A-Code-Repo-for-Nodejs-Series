@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>New Product form</h1>
+
+    <form action="/products" method="POST">  <!--action="/products"->   means jb hm /products/new route  per post req. se kise new Product ko add krege uske baad use /products pr bhej dege  jha sare products dikhege-->
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name">
+        </div>
+        <div>
+            <label for="pic">Image:</label>
+            <input type="text" name="img" id="pic">
+        </div>
+        <div>
+            <label for="price">Price:</label>
+            <input type="text" name="price" id="price">
+        </div>
+        <div>
+            <label for="des">Description:</label>
+            <textarea type="text" name="desc" rows="5" id="des"></textarea>
+        </div>
+        <button type="submit">Add Product</button>
+</body>
+</html>

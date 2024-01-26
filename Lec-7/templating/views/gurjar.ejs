@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>gurjar.ejs file</h1>
+    <!-- <h2>12+5+4</h2>  this will not give output--> 
+    <h2> <%= 12+5+4 %> </h2>  <!-- this is logical part -->
+
+    <!---------- --------->
+   <% if(true){ %>   <!-- //this is flow control part-->
+        <h1>hello goutam</h1>
+   <% }else{ %>
+        <h1>hi</h1>
+    <% } %>
+
+    
+    <!---------- print the array items--------->
+    <% for(let item of arr){ %>      <!-- use <%  %> for flow control -->
+       <%= item %>               <!-- use <%=  %> for output -->
+    <% } %>
+    
+
+    <% for(let item of arr2){ %>    
+        <!-- <%= item %>     -->
+       <li><%= item %></li>             
+           
+     <% } %>
+
+</body>
+</html>

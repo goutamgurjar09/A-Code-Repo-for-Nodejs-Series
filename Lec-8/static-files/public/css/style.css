@@ -1,0 +1,22 @@
+/* whatever page css */
+
+h1{
+    background-color: rgb(226, 168, 43);
+    color: rgb(234, 7, 7);
+    border: 2px solid black;
+}
+
+/* horror page css */
+
+p{
+    background-color: rgb(64, 43, 226);
+    color: rgb(219, 234, 7);
+    border: 2px solid black;
+
+}
+
+ul li{
+    list-style: none;
+    color: rgb(236, 4, 4);   
+}
+
